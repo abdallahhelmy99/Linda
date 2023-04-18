@@ -11,7 +11,9 @@ speech_recognition
 pyChatGPT
 wikipedia
 arrays
-You can install all the dependencies using pip:
+
+## Install Dependencies :
+
 `pip install -r requirements.txt`
 
 ## Usage
