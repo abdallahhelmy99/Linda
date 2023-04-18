@@ -12,7 +12,7 @@ pyChatGPT
 wikipedia
 arrays
 
-## Install Dependencies :
+## Install Dependencies
 
 `pip install -r requirements.txt`
 
