@@ -1,0 +1,12 @@
+random
+gtts
+pygame
+speech_recognition
+pyChatGPT
+chatgpt_wrapper
+time
+webbrowser
+os
+pyjokes
+wikipedia
+arrays
