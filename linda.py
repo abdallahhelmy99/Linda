@@ -1,10 +1,10 @@
 import random
+from dotenv import load_dotenv
 from gtts import gTTS
 from gtts.tokenizer.pre_processors import abbreviations, end_of_line
 from pygame import mixer
 import speech_recognition as sr
 from pyChatGPT import ChatGPT
-from chatgpt_wrapper import ChatGPT
 import time
 import webbrowser
 import os
@@ -57,7 +57,11 @@ def stopLinda():
             break
 
 def WakeUp():
-    bot = ChatGPT()
+    bot = ChatGPT(
+        email = os.getenv("EMAIL"),
+        password = os.getenv("PASS"),
+        auth_type = os.getenv("AUTH_TYPE"),
+    )
     speak("Initiating speech recognition")
     time.sleep(0.5)
     speak("Loading all systems")
@@ -138,3 +142,9 @@ def WakeUp():
            time.sleep(1)
            os.system("systemctl suspend")
            break
+
+
+if __name__ == '__main__':
+    load_dotenv()
+    WakeUp()
+    
